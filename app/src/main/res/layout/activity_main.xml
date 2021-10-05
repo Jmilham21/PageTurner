@@ -15,19 +15,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
+        <EditText
             android:id="@+id/search"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-        </SearchView>
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="@color/icon"
+            android:imeActionLabel="test"
+            android:minHeight="48dp" />
 
         <ImageView
             android:id="@+id/setting_image"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/ic_menu_preferences" />
+            app:srcCompat="@drawable/ic_settings"
+            android:contentDescription="@string/icon_settings_desc" />
 
     </LinearLayout>
 

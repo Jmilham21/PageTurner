@@ -20,6 +20,7 @@ object NavigationHelper {
     ) {
         val intent = Intent(currentContext, destinationActivity.javaClass)
         intent.putExtra("bundle", extras)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK) // forcing a clear stack
         currentContext.startActivity(intent)
         try {
             (currentContext as Activity).overridePendingTransition(0, 0)

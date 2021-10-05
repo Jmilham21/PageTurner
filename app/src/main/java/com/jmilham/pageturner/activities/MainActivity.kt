@@ -1,6 +1,7 @@
 package com.jmilham.pageturner.activities
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MenuInflater
 import android.view.View
@@ -12,12 +13,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jmilham.pageturner.R
 import com.jmilham.pageturner.databinding.ActivityMainBinding
 import com.jmilham.pageturner.helper.navigation.NavigationHelper
+import com.jmilham.pageturner.helper.screen.KeyboardHelper
+import com.jmilham.pageturner.helper.screen.KeyboardHelper.hideKeyboard
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    // Suppressing: TODO implement for accessibility
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,9 +40,11 @@ class MainActivity : AppCompatActivity() {
             showPopup(it)
         }
 
+        // handle the main click area
         binding.search.setOnClickListener {
             NavigationHelper.sendToActivity(this, SearchActivity(), null)
         }
+        binding.search.setOnTouchListener(KeyboardHelper.noActionTouch)
     }
 
     /***
