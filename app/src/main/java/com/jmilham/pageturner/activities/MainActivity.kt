@@ -11,10 +11,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jmilham.pageturner.R
+import com.jmilham.pageturner.activities.search.SearchActivity
 import com.jmilham.pageturner.databinding.ActivityMainBinding
 import com.jmilham.pageturner.helper.navigation.NavigationHelper
 import com.jmilham.pageturner.helper.screen.KeyboardHelper
-import com.jmilham.pageturner.helper.screen.KeyboardHelper.hideKeyboard
 
 
 class MainActivity : AppCompatActivity() {

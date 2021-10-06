@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PageTurner" >
         <activity
-            android:name=".activities.SearchActivity"
+            android:name=".activities.search.SearchActivity"
             android:exported="true" />
         <activity
             android:name=".activities.MainActivity"
