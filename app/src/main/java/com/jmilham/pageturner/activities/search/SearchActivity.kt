@@ -1,10 +1,14 @@
 package com.jmilham.pageturner.activities.search
 
 import android.os.Bundle
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jmilham.pageturner.databinding.ActivitySearchBinding
+import com.jmilham.pageturner.helper.adapter.BookModelAdapter
 import com.jmilham.pageturner.helper.screen.KeyboardHelper.hideKeyboard
 import com.jmilham.pageturner.helper.screen.KeyboardHelper.openKeyboard
 
@@ -27,7 +31,9 @@ class SearchActivity : AppCompatActivity() {
 
         binding.search.setOnEditorActionListener { textView, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                (binding.recycler.adapter as? BookModelAdapter)?.clearDataSet()
                 hideKeyboard()
+                binding.loadingLayout.visibility = View.VISIBLE
                 viewModel.searchBooks(textView.text.toString())
             }
             true
@@ -36,6 +42,7 @@ class SearchActivity : AppCompatActivity() {
 
     private fun setupObservers() {
         viewModel.liveBookModel.observe(this, {
+            binding.loadingLayout.visibility = View.GONE
             when {
                 it == null -> {
                     // api or parsing failed
@@ -45,6 +52,10 @@ class SearchActivity : AppCompatActivity() {
                 }
                 else -> {
                     // data is good and can work with
+                    binding.recycler.layoutManager = LinearLayoutManager(this)
+                    val decoration = DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
+                    binding.recycler.adapter = BookModelAdapter(it.books)
+                    binding.recycler.addItemDecoration(decoration)
                 }
             }
         })
