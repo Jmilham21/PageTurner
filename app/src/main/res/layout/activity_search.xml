@@ -22,10 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
-            android:imeOptions="actionSearch"
             android:drawableStart="@drawable/ic_search"
             android:drawableTint="@color/icon"
             android:imeActionLabel="test"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
             android:minHeight="48dp" />
 
     </LinearLayout>
