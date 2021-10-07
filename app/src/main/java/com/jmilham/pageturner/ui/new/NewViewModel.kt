@@ -1,10 +1,11 @@
 package com.jmilham.pageturner.ui.new
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
-class NewViewModel : ViewModel() {
+class NewViewModel(val app: Application) : AndroidViewModel(app) {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This the New Fragment"
