@@ -18,6 +18,8 @@ class BookModel {
         @SerializedName("author_key")
         var authorKey: ArrayList<String> = ArrayList(),
         @SerializedName("author_name")
-        var authorName: ArrayList<String> = ArrayList()
+        var authorName: ArrayList<String> = ArrayList(),
+        @SerializedName("cover_edition_key")
+        var coverKey: String = ""
     )
 }

@@ -18,11 +18,15 @@
         <entry key="..\:/Code/AndroidStudio/PageTurner/app/src/main/res/layout/main_fragment.xml" value="0.24909420289855072" />
         <entry key="..\:/Code/AndroidStudio/PageTurner/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4041666666666667" />
         <entry key="..\:/Code/AndroidStudio/PageTurner/app/src/main/res/menu/more_tab_menu.xml" value="0.4041666666666667" />
+        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/drawable/ic_launcher_icon_foreground.xml" value="0.13072916666666667" />
+        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/drawable/ic_search.xml" value="0.14375" />
         <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/drawable/ic_search_black25.xml" value="0.14635416666666667" />
         <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/drawable/ic_settings.xml" value="0.14635416666666667" />
         <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/layout/activity_search.xml" value="0.13125" />
-        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/layout/list_bookmodel_book.xml" value="0.13125" />
+        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/layout/list_bookmodel_book.xml" value="0.264" />
+        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14375" />
+        <entry key="..\:/code/androidStudio/PageTurner/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon.xml" value="0.14375" />
       </map>
     </option>
   </component>
